@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,34 +56,6 @@ Route::get('/blog', function () {
     ]);
 });
 
+Route::get('/Post', [PostController::class, 'index']);
 
-
-// halaman single post
-Route::get('posts/{slug}', function($slug) {
-    $blog_posts =[
-        [
-            "title" => "judul post pertama",
-            "slug" =>"judul-post-pertama",
-            "author" => "Cupz Stuword",
-            "body" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, suscipit? Facere nisi non ipsam exercitationem, est consequuntur illum impedit a delectus sint necessitatibus iste sit vel saepe quidem ullam nostrum."
-        ],
-        [
-            "title" => "judul post kedua",
-            "slug" =>"judul-post-kedua",
-            "author" => "Yusuf Wahyu Syahroni",
-            "body" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, suscipit? Facere nisi non ipsam exercitationem, est consequuntur illum impedit a delectus sint necessitatibus iste sit vel saepe quidem ullam nostrum."
-        ],
-    ];
-
-    $new_post = [];
-    foreach ($blog_posts as $post){
-        if($post["slug"] === $slug) {
-            $new_post = $post;
-        }
-    }
-
-    return view('post', [
-        "title" => "Single Post",
-        "post" => $new_post
-    ]);
-});
+Route::get('posts/{slug}', [PostController::class, 'show']);
