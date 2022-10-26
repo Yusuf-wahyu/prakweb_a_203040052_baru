@@ -3,9 +3,9 @@
 @section('container')
 
     <h1 class="mb-5">{{ $post->title }}</h1>
-    <p>By. Yusuf wahyu syahroni in <a href="/categories/{{ $post->category->slug }} "> {{ $post->category->name   }}}</a></p>
+    <p>By. <a href="#" class=text-decoration-none>{{ $post->user->name }}</a> <a href="/categories/{{ $post->category->slug }} "class=text-decoration-none> {{ $post->category->name   }}</a></p>
 
 {!! $post->body !!}
 
-<a href="/blog">Back to posts</a>
+<a href="/posts" c;ass="d-block mt-3">Back to posts</a>
 @endsection

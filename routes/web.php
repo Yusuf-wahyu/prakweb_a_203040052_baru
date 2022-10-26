@@ -38,12 +38,12 @@ Route::get('/categories', function() {
     return view('category', [
         'title'=> 'Post Categories',
         'posts'=> Category::all(),
-         
+
     ]);
 });
 
 
-Route::get('/categories/{category:slug}', function(category $category){
+Route::get('/categories/{category:slug}', function(Category $category){
     return view('category', [
         'title'=> $category->name,
          'posts'=> $category->posts,
@@ -53,7 +53,7 @@ Route::get('/categories/{category:slug}', function(category $category){
 
 
 
-Route::get('/blog', function () {
+Route::get('/categories', function () {
     $blog_posts =[
         [
             "title" => "judul post pertama",
@@ -69,7 +69,7 @@ Route::get('/blog', function () {
         ],
     ];
 
-    
+
     return view ('posts', [
         "title"=> "Posts",
         "posts"=> $blog_posts
