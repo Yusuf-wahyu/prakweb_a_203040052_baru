@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(3)->create();
 
 
         User::create([
@@ -43,38 +43,40 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        Post::create([
-            'title'=> 'judul pertama',
-            'slug'=> 'judul-pertama',
-            'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
-            'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
-            'category_id' => 1,
-            'user_id'=> 1
-        ]);
-        Post::create([
-            'title'=> 'judul kedua',
-            'slug'=> 'judul-kedua',
-            'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
-            'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
-            'category_id'=> 1,
-            'user_id'=>1
-        ]);
-        Post::create([
-            'title'=> 'judul ketiga',
-            'slug'=> 'judul-ketiga',
-            'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
-            'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
-            'category_id'=> 2,
-            'user_id'=>1
-        ]);
-        Post::create([
-            'title'=> 'judul keempat',
-            'slug'=> 'judul-keempat',
-            'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
-            'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
-            'category_id'=> 2,
-            'user_id'=>1
-        ]);
+        Post::factory(20)->create();
+
+        // Post::create([
+        //     'title'=> 'judul pertama',
+        //     'slug'=> 'judul-pertama',
+        //     'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
+        //     'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
+        //     'category_id' => 1,
+        //     'user_id'=> 1
+        // ]);
+        // Post::create([
+        //     'title'=> 'judul kedua',
+        //     'slug'=> 'judul-kedua',
+        //     'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
+        //     'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
+        //     'category_id'=> 1,
+        //     'user_id'=>1
+        // ]);
+        // Post::create([
+        //     'title'=> 'judul ketiga',
+        //     'slug'=> 'judul-ketiga',
+        //     'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
+        //     'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
+        //     'category_id'=> 2,
+        //     'user_id'=>1
+        // ]);
+        // Post::create([
+        //     'title'=> 'judul keempat',
+        //     'slug'=> 'judul-keempat',
+        //     'excerpt'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?',
+        //     'body'=> 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe, corrupti, hic iusto eos assumenda dolorem vel quisquam laboriosam cupiditate fugit pariatur? Dolores facilis corrupti mollitia distinctio dolore? Exercitationem, doloremque?'
+        //     'category_id'=> 2,
+        //     'user_id'=>1
+        // ]);
 
 
     }
