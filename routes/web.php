@@ -31,6 +31,9 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/Post', [PostController::class, 'index']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
 
 
 Route::get('/blog', function () {
@@ -55,7 +58,3 @@ Route::get('/blog', function () {
         "posts"=> $blog_posts
     ]);
 });
-
-Route::get('/Post', [PostController::class, 'index']);
-
-Route::get('posts/{slug}', [PostController::class, 'show']);
